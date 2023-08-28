@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 from .models import User
 
@@ -8,3 +8,7 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         # fields = '__all__'
         fields = ('username', )
+
+
+class CustomAuthenticationForm(AuthenticationForm):
+    pass
