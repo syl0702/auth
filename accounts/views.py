@@ -37,7 +37,7 @@ def login(request):
             next_url = request.GET.get('next') # => /articles/create/
 
 
-            return redirect(next_url or 'accounts:index')
+            return redirect(next_url or 'articles:index')
             # next 인자가 url에 있을 때 => '/articles/create/' or 'articles:index'
             # next 인자가 url에 없을 때 => None or 'articles:index'
             
